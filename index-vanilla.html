@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxyAI - AI Market</title>
+    <meta name="description" content="Interactive AI-powered product selection experience">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-vanilla.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="header-title">BoxyAI</h1>
+    </header>
+
+    <!-- Landing Stage -->
+    <div id="landing-stage" class="stage active">
+        <div class="container">
+            <div class="center-content">
+                <h2 class="main-title">AI Products chooser</h2>
+                <p class="instruction-text">Choose only one box at a time</p> <!-- New text section -->
+                <button id="start-btn" class="btn btn-primary">Start</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Selection Stage -->
+    <div id="selection-stage" class="stage">
+        <div class="container">
+            <div class="selection-wrapper">
+                <div class="progress-text">
+                    Select your favorite product (<span id="current-round">1</span>/4)
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card" data-index="0">
+                        <img src="" alt="Product option 1" class="product-image">
+                    </div>
+                    <div class="product-card" data-index="1">
+                        <img src="" alt="Product option 2" class="product-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basket Stage -->
+    <div id="basket-stage" class="stage">
+        <div class="container">
+            <div class="basket-wrapper">
+                <div class="basket-icon-wrapper">
+                    <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                
+                <h3 class="basket-title">Your selections are ready!</h3>
+                
+                <button id="generate-btn" class="btn btn-primary">Generate Product</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Downloading Stage -->
+    <div id="downloading-stage" class="stage">
+        <div class="container">
+            <div class="download-wrapper">
+                <h3 class="download-title">Generating your product...</h3>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reveal Stage -->
+    <div id="reveal-stage" class="stage">
+        <div class="container">
+            <div class="reveal-wrapper">
+                <h3 class="reveal-title">Here's your selected product!</h3>
+                
+                <div class="final-product-card">
+                    <img id="final-product-img" src="" alt="Your selected product" class="final-product-image">
+                </div>
+                
+                <button id="receive-btn" class="btn btn-primary">Receive Basket</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-vanilla.js"></script>
+</body>
+</html>
